@@ -146,9 +146,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(copyOG, oldFlav){
+    copyOG = [...copyOG];
+    const index = copyOG.indexOf(oldFlav);
+        if (index > -1){
+        copyOG.splice(index, 1);
+        return copyOG;
+        }
 }
+console.log(removeFlavorByName(originalFlavors, "Vanilla"))
+
 
 
 
