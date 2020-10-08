@@ -178,9 +178,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+const filterByWord = function(copyOG, partialFlav){
+    copyOG = [...copyOG];
+    let newarr =  [];
+    for (let i = 0; i < copyOG.length; i++){
+        if (copyOG[i].includes(partialFlav)){
+            newarr.push(copyOG[i]);
+        }
+    }
+    return newarr;
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'))
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
